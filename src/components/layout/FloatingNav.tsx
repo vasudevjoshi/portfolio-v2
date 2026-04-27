@@ -6,13 +6,13 @@ function FloatingNav() {
       aria-label="Quick navigation"
       className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2"
     >
-      <div className="flex min-w-[21rem] items-center justify-between gap-3 rounded-full border border-slate-200 bg-white/95 px-5 py-2.5 shadow-[0_20px_50px_rgba(15,23,42,0.25)] backdrop-blur sm:min-w-[26rem] sm:px-6">
+      <div className="flex min-w-[21rem] items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#0f1629]/90 px-4 py-3 shadow-[0_22px_50px_rgba(0,0,0,0.35)] backdrop-blur sm:min-w-[26rem] sm:px-5">
         {floatingNavItems.map((item) => (
           <a
             key={item.label}
             href={item.href}
             aria-label={item.label}
-            className="group flex h-10 w-10 items-center justify-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-blue-700"
+            className="group flex h-11 w-11 items-center justify-center rounded-xl border border-transparent text-slate-400 transition hover:border-white/10 hover:bg-white/5 hover:text-white"
           >
             <NavIcon icon={item.icon} />
           </a>
@@ -30,7 +30,7 @@ function NavIcon({ icon }: { icon: IconName }) {
     fill: 'none',
     stroke: 'currentColor',
     strokeWidth: '1.9',
-    className: 'h-5.5 w-5.5',
+    className: 'h-5 w-5',
   }
 
   if (icon === 'home') {
