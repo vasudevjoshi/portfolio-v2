@@ -3,7 +3,7 @@ import ExperienceSection from '../components/sections/ExperienceSection'
 
 function ExperiencePage() {
   return (
-    <SiteShell className="bg-white pb-28">
+    <SiteShell className="bg-[#0b0f19] pb-28 text-slate-100">
       <ExperienceSection />
     </SiteShell>
   )

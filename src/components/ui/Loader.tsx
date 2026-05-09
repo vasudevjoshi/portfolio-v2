@@ -38,7 +38,9 @@ const StyledWrapper = styled.div`
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #f8fafc;
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 28%),
+    linear-gradient(180deg, #0b0f19 0%, #090d16 100%);
 
   .boxes {
     --size: 32px;
@@ -82,7 +84,7 @@ const StyledWrapper = styled.div`
   }
 
   .boxes .box > div {
-    --background: #5c8df6;
+    --background: #60a5fa;
     --top: auto;
     --right: auto;
     --bottom: auto;
@@ -108,18 +110,18 @@ const StyledWrapper = styled.div`
   }
 
   .boxes .box > div:nth-child(2) {
-    --background: #145af2;
+    --background: #2563eb;
     --right: 0;
     --rotateY: 90deg;
   }
 
   .boxes .box > div:nth-child(3) {
-    --background: #447cf5;
+    --background: #38bdf8;
     --rotateX: -90deg;
   }
 
   .boxes .box > div:nth-child(4) {
-    --background: #dbe3f4;
+    --background: rgba(148, 163, 184, 0.22);
     --top: 0;
     --left: 0;
     --translateZ: calc(var(--size) * 3 * -1);

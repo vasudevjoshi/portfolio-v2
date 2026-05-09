@@ -3,17 +3,17 @@ import { contactCards, contactLinks, contactMeta } from '../../data/site'
 
 function ContactSection() {
   return (
-    <section id="contact" className="bg-white px-6 py-14 text-slate-900 sm:px-8 lg:py-16">
+    <section id="contact" className="border-t border-white/10 bg-[#0b0f19] px-6 py-14 text-slate-100 sm:px-8 lg:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
               Connect
             </p>
-            <h1 className="mt-4 max-w-4xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[3rem]">
+            <h1 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-[3rem]">
               LET&apos;S BUILD SOMETHING
             </h1>
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base">
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
               I&apos;m open to opportunities and collaborations. Whether you have a
               question or just want to say hi, I&apos;ll try my best to get back to you.
             </p>
@@ -25,15 +25,15 @@ function ContactSection() {
                   href={card.href}
                   target={card.href.startsWith('http') ? '_blank' : undefined}
                   rel={card.href.startsWith('http') ? 'noreferrer' : undefined}
-                  className="rounded-[1.4rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5"
+                  className="rounded-xl border border-white/10 bg-white/[0.04] px-5 py-5 shadow-[0_16px_40px_rgba(0,0,0,0.22)] transition hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.06]"
                 >
-                  <div className="flex items-center gap-3 text-slate-500">
-                    <ContactIcon icon={card.icon} className="h-5 w-5 text-blue-700" />
+                  <div className="flex items-center gap-3 text-slate-400">
+                    <ContactIcon icon={card.icon} className="h-5 w-5 text-sky-300" />
                     <p className="text-xs font-semibold uppercase tracking-[0.14em]">
                       {card.title}
                     </p>
                   </div>
-                  <p className="mt-3 text-lg font-semibold text-slate-900 sm:text-[1.45rem]">
+                  <p className="mt-3 text-lg font-semibold text-white sm:text-[1.45rem]">
                     {card.value}
                   </p>
                 </a>
@@ -43,7 +43,7 @@ function ContactSection() {
             <div className="mt-12 flex flex-wrap items-center gap-4">
               <a
                 href={contactMeta.resumeHref}
-                className="inline-flex items-center gap-3 rounded-[1.1rem] bg-blue-700 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(29,78,216,0.35)] transition hover:bg-blue-600"
+                className="inline-flex items-center gap-3 rounded-xl border border-sky-500/30 bg-sky-500/10 px-7 py-3.5 text-sm font-semibold text-sky-100 transition hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-white"
               >
                 <ContactIcon icon="download" className="h-4.5 w-4.5" />
                 Download Resume
@@ -54,7 +54,7 @@ function ContactSection() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Visit website"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition hover:text-blue-700"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition hover:border-white/20 hover:text-white"
               >
                 <ContactIcon icon="link" className="h-4.5 w-4.5" />
               </a>
@@ -64,7 +64,7 @@ function ContactSection() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="View code profile"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition hover:text-blue-700"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition hover:border-white/20 hover:text-white"
               >
                 <ContactIcon icon="code" className="h-4.5 w-4.5" />
               </a>
@@ -84,16 +84,16 @@ function ContactSection() {
               />
             </div>
 
-            <article className="rounded-[1.6rem] bg-blue-600 px-6 py-7 text-white shadow-[0_24px_50px_rgba(37,99,235,0.35)]">
+            <article className="rounded-2xl border border-sky-500/20 bg-[linear-gradient(145deg,#0f172a_0%,#111827_100%)] px-6 py-7 text-white shadow-[0_24px_50px_rgba(0,0,0,0.24)]">
               <div className="flex items-start gap-4">
-                <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-blue-700/80 text-white">
+                <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500/10 text-sky-300">
                   <ContactIcon icon="dot" className="h-5 w-5" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold tracking-tight">
                     {contactMeta.availabilityTitle}
                   </h2>
-                  <p className="mt-3 max-w-md text-sm leading-6 text-blue-100 sm:text-base">
+                  <p className="mt-3 max-w-md text-sm leading-6 text-slate-300 sm:text-base">
                     {contactMeta.availabilityText}
                   </p>
                 </div>
@@ -107,9 +107,9 @@ function ContactSection() {
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-3 rounded-[1rem] border border-slate-200 bg-white px-4 py-3.5 text-base font-medium text-slate-800 shadow-[0_10px_24px_rgba(15,23,42,0.05)] transition hover:-translate-y-0.5 hover:text-blue-700"
+                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base font-medium text-slate-200 shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:border-white/20 hover:text-white"
                 >
-                  <ContactIcon icon={link.icon} className="h-4.5 w-4.5 text-slate-500" />
+                  <ContactIcon icon={link.icon} className="h-4.5 w-4.5 text-slate-400" />
                   {link.label}
                 </a>
               ))}

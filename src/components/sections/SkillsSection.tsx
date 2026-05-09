@@ -2,16 +2,16 @@ import { sideSkillGroups, skillGroups } from '../../data/site'
 
 function SkillsSection() {
   return (
-    <section id="skills" className="bg-white px-6 py-20 sm:px-8 lg:py-24">
+    <section id="skills" className="border-t border-white/10 bg-[#0b0f19] px-6 py-20 text-slate-100 sm:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">
             Technical Skills
           </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Technologies I work with
           </h2>
-          <p className="mt-4 text-base leading-7 text-slate-500 sm:text-lg">
+          <p className="mt-4 text-base leading-7 text-slate-400 sm:text-lg">
             A practical stack focused on building clean interfaces, dependable
             backend systems, and applied AI products for real users.
           </p>
@@ -22,11 +22,11 @@ function SkillsSection() {
             {skillGroups.map((group) => (
               <article
                 key={group.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:p-7"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.22)] sm:p-7"
               >
                 <div className="flex items-center gap-3">
-                  <SkillIcon icon={group.icon} className="h-6 w-6 text-blue-700" />
-                  <h3 className="text-xl font-bold tracking-tight text-slate-900">
+                  <SkillIcon icon={group.icon} className="h-6 w-6 text-sky-300" />
+                  <h3 className="text-xl font-semibold tracking-tight text-white">
                     {group.title}
                   </h3>
                 </div>
@@ -43,10 +43,10 @@ function SkillsSection() {
                     return (
                       <span
                         key={skillName}
-                        className={`rounded-full border px-4 py-2 text-sm font-medium ${
+                        className={`rounded-xl border px-4 py-2 text-sm font-medium ${
                           isFeatured
-                            ? 'border-emerald-200 bg-emerald-100 text-emerald-800'
-                            : 'border-slate-200 bg-slate-100 text-slate-700'
+                            ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-300'
+                            : 'border-white/10 bg-white/5 text-slate-200'
                         }`}
                       >
                         {skillName}
@@ -58,16 +58,16 @@ function SkillsSection() {
             ))}
           </div>
 
-          <aside className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:p-7">
+          <aside className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.22)] sm:p-7">
             <div className="space-y-10">
               {sideSkillGroups.map((group, index) => (
                 <div
                   key={group.title}
-                  className={index > 0 ? 'border-t border-slate-200 pt-10' : ''}
+                  className={index > 0 ? 'border-t border-white/10 pt-10' : ''}
                 >
                   <div className="flex items-center gap-3">
-                    <SkillIcon icon={group.icon} className="h-6 w-6 text-blue-700" />
-                    <h3 className="text-xl font-bold tracking-tight text-slate-900">
+                    <SkillIcon icon={group.icon} className="h-6 w-6 text-sky-300" />
+                    <h3 className="text-xl font-semibold tracking-tight text-white">
                       {group.title}
                     </h3>
                   </div>
@@ -76,7 +76,7 @@ function SkillsSection() {
                     {group.items.map((item) => (
                       <span
                         key={item}
-                        className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700"
+                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200"
                       >
                         {item}
                       </span>
@@ -86,11 +86,11 @@ function SkillsSection() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-[1.4rem] bg-slate-800 p-5 text-slate-100 shadow-[0_16px_32px_rgba(15,23,42,0.16)]">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+            <div className="mt-12 rounded-xl border border-sky-500/20 bg-[#0f1629] p-5 text-slate-100 shadow-[0_16px_32px_rgba(0,0,0,0.18)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                 Code Proficiency
               </p>
-              <pre className="mt-4 overflow-x-auto text-xs leading-6 text-slate-200 sm:text-sm">
+              <pre className="mt-4 overflow-x-auto text-xs leading-6 text-slate-300 sm:text-sm">
 {`const skills = {
   stack: "Full Stack",
   focus: ["AI", "Fintech"],

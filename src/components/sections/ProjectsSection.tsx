@@ -5,16 +5,16 @@ function ProjectsSection() {
   const featuredProject = featuredProjects.find((project) => project.layout === 'featured')
 
   return (
-    <section id="projects" className="bg-white px-6 py-18 sm:px-8 lg:py-20">
+    <section id="projects" className="border-t border-white/10 bg-[#0b0f19] px-6 py-18 text-slate-100 sm:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">
             Featured Projects
           </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             What I&apos;ve been building
           </h2>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-500 sm:text-lg">
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-400 sm:text-lg">
             A selection of technical explorations, research implementations, and
             production-grade engineering.
           </p>
@@ -24,25 +24,25 @@ function ProjectsSection() {
           {topProjects.map((project) => (
             <article
               key={project.title}
-              className="rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
+              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.22)]"
             >
               <div className="flex items-start justify-between gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-blue-700">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-slate-950/70 text-sky-300">
                   <ProjectIcon icon={project.icon} className="h-6 w-6" />
                 </div>
                 <span className={statusClassName(project.statusTone)}>{project.status}</span>
               </div>
 
-              <h3 className="mt-7 text-2xl font-semibold tracking-tight text-slate-900">
+              <h3 className="mt-7 text-2xl font-semibold tracking-tight text-white">
                 {project.title}
               </h3>
-              <p className="mt-4 text-base leading-8 text-slate-600">{project.description}</p>
+              <p className="mt-4 text-base leading-8 text-slate-400">{project.description}</p>
 
               <div className="mt-7 flex flex-wrap gap-3">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700"
+                    className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200"
                   >
                     {tag}
                   </span>
@@ -54,7 +54,7 @@ function ProjectsSection() {
                   href={project.primaryHref}
                   target={project.primaryHref.startsWith('http') ? '_blank' : undefined}
                   rel={project.primaryHref.startsWith('http') ? 'noreferrer' : undefined}
-                  className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-600"
+                  className="inline-flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-500/10 px-6 py-3 text-sm font-semibold text-sky-100 transition hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-white"
                 >
                   {project.primaryLabel}
                   <ArrowIcon className="h-4 w-4" />
@@ -65,7 +65,7 @@ function ProjectsSection() {
                     href={project.secondaryHref}
                     target={project.secondaryHref.startsWith('http') ? '_blank' : undefined}
                     rel={project.secondaryHref.startsWith('http') ? 'noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-blue-700 transition hover:text-blue-600"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition hover:text-white"
                   >
                     <CodeIcon className="h-4 w-4" />
                     {project.secondaryLabel}
@@ -77,22 +77,22 @@ function ProjectsSection() {
         </div>
 
         {featuredProject ? (
-          <article className="mt-6 rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+          <article className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
             <div className="grid gap-8 lg:grid-cols-[0.6fr_1fr] lg:items-center">
-              <div className="overflow-hidden rounded-[1.25rem] border border-slate-200 bg-slate-900 p-3">
-                <div className="relative h-[220px] rounded-[0.9rem] bg-[radial-gradient(circle_at_60%_70%,rgba(59,130,246,0.45),transparent_18%),linear-gradient(145deg,#101828_0%,#1f2937_100%)]">
-                  <div className="absolute left-5 top-5 h-5 w-40 rounded-full bg-white/10" />
-                  <div className="absolute left-5 top-14 h-3 w-28 rounded-full bg-white/10" />
-                  <div className="absolute left-5 top-20 h-3 w-20 rounded-full bg-white/10" />
-                  <div className="absolute left-5 top-28 h-24 w-[78%] rounded-[1rem] border border-white/10 bg-white/5" />
-                  <div className="absolute left-[56%] top-[52%] h-16 w-16 rounded-full border border-blue-300/50 bg-blue-400/20 shadow-[0_0_24px_rgba(96,165,250,0.35)]" />
-                  <div className="absolute left-[62%] top-[67%] h-10 w-2 -rotate-45 rounded-full bg-blue-300/80" />
+              <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/70 p-3">
+                <div className="relative h-[220px] rounded-[0.85rem] bg-[radial-gradient(circle_at_60%_70%,rgba(59,130,246,0.38),transparent_18%),linear-gradient(145deg,#0f172a_0%,#111827_100%)]">
+                  <div className="absolute left-5 top-5 h-5 w-40 rounded-full bg-white/8" />
+                  <div className="absolute left-5 top-14 h-3 w-28 rounded-full bg-white/8" />
+                  <div className="absolute left-5 top-20 h-3 w-20 rounded-full bg-white/8" />
+                  <div className="absolute left-5 top-28 h-24 w-[78%] rounded-xl border border-white/10 bg-white/[0.04]" />
+                  <div className="absolute left-[56%] top-[52%] h-16 w-16 rounded-full border border-sky-300/40 bg-sky-400/15 shadow-[0_0_24px_rgba(96,165,250,0.25)]" />
+                  <div className="absolute left-[62%] top-[67%] h-10 w-2 -rotate-45 rounded-full bg-sky-300/80" />
                 </div>
               </div>
 
               <div>
                 <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-blue-700">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-slate-950/70 text-sky-300">
                     <ProjectIcon icon={featuredProject.icon} className="h-6 w-6" />
                   </div>
                   <span className={statusClassName(featuredProject.statusTone)}>
@@ -100,10 +100,10 @@ function ProjectsSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-2xl font-semibold tracking-tight text-slate-900">
+                <h3 className="mt-6 text-2xl font-semibold tracking-tight text-white">
                   {featuredProject.title}
                 </h3>
-                <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">
+                <p className="mt-4 max-w-3xl text-base leading-8 text-slate-400">
                   {featuredProject.description}
                 </p>
 
@@ -111,7 +111,7 @@ function ProjectsSection() {
                   {featuredProject.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700"
+                      className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200"
                     >
                       {tag}
                     </span>
@@ -123,7 +123,7 @@ function ProjectsSection() {
                     href={featuredProject.primaryHref}
                     target={featuredProject.primaryHref.startsWith('http') ? '_blank' : undefined}
                     rel={featuredProject.primaryHref.startsWith('http') ? 'noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 text-base font-medium text-blue-700 transition hover:text-blue-600"
+                    className="inline-flex items-center gap-2 text-base font-medium text-sky-300 transition hover:text-white"
                   >
                     {featuredProject.primaryLabel}
                     <ArrowIcon className="h-4 w-4" />
@@ -140,14 +140,14 @@ function ProjectsSection() {
 
 function statusClassName(tone: 'green' | 'neutral' | 'blue') {
   if (tone === 'green') {
-    return 'inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-2 text-xs font-semibold text-emerald-700'
+    return 'inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-xs font-semibold text-emerald-300'
   }
 
   if (tone === 'blue') {
-    return 'inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-xs font-semibold text-blue-700'
+    return 'inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-4 py-2 text-xs font-semibold text-sky-300'
   }
 
-  return 'inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-xs font-semibold text-slate-600'
+  return 'inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-300'
 }
 
 function ProjectIcon({
