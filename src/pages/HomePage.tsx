@@ -23,7 +23,7 @@ function HomePage() {
   }, [])
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-50">
+    <div className="relative min-h-screen overflow-hidden bg-[#0b0f19] text-slate-100">
       <div
         className={`transition-all duration-700 ease-out ${
           isLoaded
