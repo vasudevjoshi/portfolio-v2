@@ -6,7 +6,7 @@ on:
   
 jobs:
   deploy:
-    runs-on: [self-hosted,awsrunner]
+    runs-on: self-hosted
 
     steps:
       - name: checkout code
