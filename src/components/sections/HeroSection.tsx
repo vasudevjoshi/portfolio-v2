@@ -159,21 +159,21 @@ function StatCard({ label, value }: { label: string; value: string }) {
     </div>
   )
 }
-
-function ProfileIcon({ className = '' }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      className={className}
-    >
-      <path d="M12 12a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" />
-      <path d="M4.5 19.25a7.5 7.5 0 0 1 15 0v.25h-15v-.25Z" />
-    </svg>
-  )
-}
+// I removed the ProfileIcon component as it was not used in the application.
+// function ProfileIcon({ className = '' }: IconProps) {
+//   return (
+//     <svg
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="1.8"
+//       className={className}
+//     >
+//       <path d="M12 12a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" />
+//       <path d="M4.5 19.25a7.5 7.5 0 0 1 15 0v.25h-15v-.25Z" />
+//     </svg>
+//   )
+// }
 
 function EducationIcon({ className = '' }: IconProps) {
   return (
