@@ -2,7 +2,6 @@ import { featuredProjects } from '../../data/site'
 
 function ProjectsSection() {
   const topProjects = featuredProjects.filter((project) => project.layout === 'standard')
-  const featuredProject = featuredProjects.find((project) => project.layout === 'featured')
 
   return (
     <section id="projects" className="border-t border-white/10 bg-[#0b0f19] px-6 py-18 text-slate-100 sm:px-8 lg:py-20">
