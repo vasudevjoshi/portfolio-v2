@@ -2,6 +2,7 @@ import { featuredProjects } from '../../data/site'
 
 function ProjectsSection() {
   const topProjects = featuredProjects.filter((project) => project.layout === 'standard')
+  
 
   return (
     <section id="projects" className="border-t border-white/10 bg-[#0b0f19] px-6 py-18 text-slate-100 sm:px-8 lg:py-20">
@@ -74,64 +75,6 @@ function ProjectsSection() {
             </article>
           ))}
         </div>
-
-        {featuredProject ? (
-          <article className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
-            <div className="grid gap-8 lg:grid-cols-[0.6fr_1fr] lg:items-center">
-              <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/70 p-3">
-                <div className="relative h-[220px] rounded-[0.85rem] bg-[radial-gradient(circle_at_60%_70%,rgba(59,130,246,0.38),transparent_18%),linear-gradient(145deg,#0f172a_0%,#111827_100%)]">
-                  <div className="absolute left-5 top-5 h-5 w-40 rounded-full bg-white/8" />
-                  <div className="absolute left-5 top-14 h-3 w-28 rounded-full bg-white/8" />
-                  <div className="absolute left-5 top-20 h-3 w-20 rounded-full bg-white/8" />
-                  <div className="absolute left-5 top-28 h-24 w-[78%] rounded-xl border border-white/10 bg-white/[0.04]" />
-                  <div className="absolute left-[56%] top-[52%] h-16 w-16 rounded-full border border-sky-300/40 bg-sky-400/15 shadow-[0_0_24px_rgba(96,165,250,0.25)]" />
-                  <div className="absolute left-[62%] top-[67%] h-10 w-2 -rotate-45 rounded-full bg-sky-300/80" />
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-slate-950/70 text-sky-300">
-                    <ProjectIcon icon={featuredProject.icon} className="h-6 w-6" />
-                  </div>
-                  <span className={statusClassName(featuredProject.statusTone)}>
-                    {featuredProject.status}
-                  </span>
-                </div>
-
-                <h3 className="mt-6 text-2xl font-semibold tracking-tight text-white">
-                  {featuredProject.title}
-                </h3>
-                <p className="mt-4 max-w-3xl text-base leading-8 text-slate-400">
-                  {featuredProject.description}
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-3">
-                  {featuredProject.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-8">
-                  <a
-                    href={featuredProject.primaryHref}
-                    target={featuredProject.primaryHref.startsWith('http') ? '_blank' : undefined}
-                    rel={featuredProject.primaryHref.startsWith('http') ? 'noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 text-base font-medium text-sky-300 transition hover:text-white"
-                  >
-                    {featuredProject.primaryLabel}
-                    <ArrowIcon className="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-        ) : null}
       </div>
     </section>
   )
