@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { techStack } from '../../data/site'
 
 function HeroSection() {
@@ -40,18 +41,18 @@ function HeroSection() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="rounded-xl border border-sky-500/30 bg-sky-500/10 px-6 py-3 text-sm font-semibold text-sky-100 transition hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-white"
             >
               View Projects
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/20 hover:bg-white/10"
             >
               Let&apos;s Talk
-            </a>
+            </Link>
           </div>
 
           <div className="mt-14 grid gap-3 sm:grid-cols-3">

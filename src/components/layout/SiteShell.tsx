@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import FloatingNav from './FloatingNav'
 import Footer from './Footer'
 import Header from './Header'
 
@@ -19,7 +18,6 @@ function SiteShell({
       <Header />
       <main className="relative z-10">{children}</main>
       <Footer />
-      <FloatingNav />
     </div>
   )
 }

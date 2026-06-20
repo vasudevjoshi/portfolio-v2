@@ -26,12 +26,12 @@ function ExperienceSection() {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                      Founder &amp; Developer
+                    Developer
                     </h3>
                     <p className="mt-1 text-sm font-medium text-sky-300">LogX</p>
                   </div>
                   <span className="rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-300">
-                    2024 - Present
+                    2026 - Present
                   </span>
                 </div>
 
@@ -48,7 +48,7 @@ function ExperienceSection() {
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   <span className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">React</span>
-                  <span className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">Node.js</span>
+                  <span className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">FastAPI</span>
                   <span className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">Kite Connect</span>
                   <span className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">PostgreSQL</span>
                 </div>
@@ -58,24 +58,24 @@ function ExperienceSection() {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                      Angular Developer Intern
+                    Intern
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-emerald-300">Tech systems Inc.</p>
+                    <p className="mt-1 text-sm font-medium text-emerald-300">OpenText</p>
                   </div>
                   <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-300">
-                    2023 - 2024
+                    October 2025 - April 2026
                   </span>
                 </div>
 
                 <p className="mt-5 text-base leading-7 text-slate-400">
                   Focused on building scalable enterprise-grade web applications using
-                  the Angular framework.
+                  the Angular framework along with writing the scalable backend
                 </p>
 
                 <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300 sm:text-base">
-                  <li>Developed config-driven dynamic forms that reduced frontend development time by 40%.</li>
-                  <li>Designed and implemented advanced report generation features with complex data visualization.</li>
-                  <li>Organized and led technical KT sessions for onboarding new team members.</li>
+                  <li>Worked on Install Automation of OpenText Products</li>
+                  <li>Refactored the  2500+ lines of code into scalable code with design pattern</li>
+                  <li>Organized and led technical KT sessions for new team members.</li>
                 </ul>
 
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -90,27 +90,21 @@ function ExperienceSection() {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                      Research Assistant
+                      SDE Intern
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-amber-300">JeevTU Research Cell</p>
+                    <p className="mt-1 text-sm font-medium text-amber-300">Team DNote</p>
                   </div>
                   <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-300">
-                    2022 - 2023
+                    September 2025 - October 2025
                   </span>
                 </div>
 
                 <p className="mt-5 text-base leading-7 text-slate-400">
-                  Collaborated on machine learning research focused on chemical
-                  informatics and data-driven discovery.
+                  Worked building the Payments Page for their Platform
                 </p>
-
-                <div className="mt-5 rounded-xl border border-amber-500/20 bg-amber-500/10 p-4">
-                  <p className="text-sm font-semibold text-amber-300">IEEE Publication</p>
-                  <p className="mt-2 text-sm leading-6 text-amber-100">
-                    Chemical Compounds Recommendation Engine published at the IEEE
-                    International Conference on Technical Advancements.
-                  </p>
-                </div>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300 sm:text-base">
+                  <li>Developed the frontend and backend for the handling the subscription for their Pro,Premium Plans Using Razorpay SDK</li>
+                </ul>
               </article>
             </div>
           </div>
@@ -148,8 +142,7 @@ function ExperienceSection() {
                 Chemical Compounds Recommendation Engine
               </h3>
               <p className="mt-3 text-sm leading-6 text-slate-300">
-                A machine learning approach to predicting molecular synergies and
-                properties for chemical engineering researchers.
+                A RAG based approach for recommending the chemicals and fact checking the chemicals indgredients for the concerned skin type
               </p>
               <a
                 href="https://doi.org/10.22214/ijraset.2026.79381"
@@ -160,16 +153,6 @@ function ExperienceSection() {
                 Read Paper
               </a>
             </section>
-
-            <section className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_16px_30px_rgba(0,0,0,0.22)]">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Top Skills</p>
-
-              <div className="mt-4 space-y-4">
-                <SkillBar label="Full-stack Dev" value={92} />
-                <SkillBar label="Data Visualization" value={88} />
-                <SkillBar label="System Architecture" value={85} />
-              </div>
-            </section>
           </aside>
         </div>
       </div>
@@ -177,21 +160,5 @@ function ExperienceSection() {
   )
 }
 
-function SkillBar({ label, value }: { label: string; value: number }) {
-  return (
-    <div>
-      <div className="flex items-center justify-between text-sm text-slate-300">
-        <span>{label}</span>
-        <span className="font-semibold text-slate-400">{value}%</span>
-      </div>
-      <div className="mt-2 h-2 rounded-full bg-white/10">
-        <div
-          className="h-2 rounded-full bg-sky-400"
-          style={{ width: `${value}%` }}
-        />
-      </div>
-    </div>
-  )
-}
 
 export default ExperienceSection

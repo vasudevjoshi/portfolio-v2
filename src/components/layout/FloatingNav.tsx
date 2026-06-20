@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { floatingNavItems } from '../../data/site'
 
 function FloatingNav() {
@@ -8,14 +9,14 @@ function FloatingNav() {
     >
       <div className="flex min-w-[21rem] items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#0f1629]/90 px-4 py-3 shadow-[0_22px_50px_rgba(0,0,0,0.35)] backdrop-blur sm:min-w-[26rem] sm:px-5">
         {floatingNavItems.map((item) => (
-          <a
+          <Link
             key={item.label}
-            href={item.href}
+            to={item.href}
             aria-label={item.label}
             className="group flex h-11 w-11 items-center justify-center rounded-xl border border-transparent text-slate-400 transition hover:border-white/10 hover:bg-white/5 hover:text-white"
           >
             <NavIcon icon={item.icon} />
-          </a>
+          </Link>
         ))}
       </div>
     </nav>

@@ -31,8 +31,8 @@ export const featuredProjects = [
     tags: ['React', 'Fast API', 'Kite API', 'MongoDB'],
     primaryLabel: 'Visit logxapp.in',
     primaryHref: 'https://logxapp.in',
-    secondaryLabel: 'View Code',
-    secondaryHref: 'https://github.com/vasudevjoshi',
+    secondaryLabel: null,
+    secondaryHref: null,
     icon: 'chart',
     layout: 'standard',
   },
@@ -49,20 +49,6 @@ export const featuredProjects = [
     secondaryHref: 'https://github.com/vasudevjoshi/fyp',
     icon: 'lab',
     layout: 'standard',
-  },
-  {
-    title: 'Dynamic Form Engine',
-    description:
-      'Built reusable, config-driven reactive form components at internship. Supports validation, conditional logic, and report downloads. A performance-first architecture used in large-scale corporate applications.',
-    status: 'Production',
-    statusTone: 'blue',
-    tags: ['Angular', 'TypeScript', 'Reactive Forms'],
-    primaryLabel: 'Case Study',
-    primaryHref: '#',
-    secondaryLabel: null,
-    secondaryHref: null,
-    icon: 'stack',
-    layout: 'featured',
   },
 ] as const
 
