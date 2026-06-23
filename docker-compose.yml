@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   client:
-    image: vasudevjoshi/portofolio2:latest
-    container_name: portofolio2
+    image: vasudevjoshi/portfolio2:latest
+    container_name: portfolio2
     restart: unless-stopped 
     ports:
       - "5173:3000"
