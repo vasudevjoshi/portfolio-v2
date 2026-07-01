@@ -126,7 +126,7 @@ export const contactMeta = {
   availabilityTitle: 'Available for Remote',
   availabilityText:
     'I thrive in asynchronous environments and distributed teams across any timezone.',
-  resumeHref: '#',
+  resumeHref: 'https://drive.google.com/file/d/14m49mFJ6be2gJKtEif79_6-xwvtv4TJz/view?usp=sharing',
   portfolioHref: 'https://logxapp.in',
   codeHref: 'https://github.com/vasudevjoshi',
 } as const

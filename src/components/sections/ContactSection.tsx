@@ -43,6 +43,8 @@ function ContactSection() {
             <div className="mt-12 flex flex-wrap items-center gap-4">
               <a
                 href={contactMeta.resumeHref}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-3 rounded-xl border border-sky-500/30 bg-sky-500/10 px-7 py-3.5 text-sm font-semibold text-sky-100 transition hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-white"
               >
                 <ContactIcon icon="download" className="h-4.5 w-4.5" />
