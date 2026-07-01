@@ -4,7 +4,7 @@ import Map, { Marker, Popup, NavigationControl } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function LocationMap() {
-  const [popupInfo, setPopupInfo] = useState(null);
+  const [popupInfo, setPopupInfo] = useState({});
 
   const locations = [
     { id: 1, name: 'Bengaluru', lat: 12.9716, lng: 77.5946 },
