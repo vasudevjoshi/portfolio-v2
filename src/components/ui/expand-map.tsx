@@ -1,10 +1,17 @@
-// src/components/MyMap.jsx
+// src/components/ui/expand-map.tsx
 import { useState } from 'react';
 import Map, { Marker, Popup, NavigationControl } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
+interface Location {
+  id: number;
+  name: string;
+  lat: number;
+  lng: number;
+}
+
 function LocationMap() {
-  const [popupInfo, setPopupInfo] = useState({});
+  const [popupInfo, setPopupInfo] = useState<Location | null>(null);
 
   const locations = [
     { id: 1, name: 'Bengaluru', lat: 12.9716, lng: 77.5946 },
