@@ -1,4 +1,4 @@
-import { LocationMap } from '@/components/ui/expand-map'
+import  LocationMap from '@/components/ui/expand-map'
 import { contactCards, contactLinks, contactMeta } from '../../data/site'
 
 function ContactSection() {
@@ -50,26 +50,6 @@ function ContactSection() {
                 <ContactIcon icon="download" className="h-4.5 w-4.5" />
                 Download Resume
               </a>
-
-              <a
-                href={contactMeta.portfolioHref}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Visit website"
-                className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition hover:border-white/20 hover:text-white"
-              >
-                <ContactIcon icon="link" className="h-4.5 w-4.5" />
-              </a>
-
-              <a
-                href={contactMeta.codeHref}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="View code profile"
-                className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition hover:border-white/20 hover:text-white"
-              >
-                <ContactIcon icon="code" className="h-4.5 w-4.5" />
-              </a>
             </div>
           </div>
 
@@ -78,12 +58,7 @@ function ContactSection() {
               <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-slate-500">
                 Current Location
               </p>
-              <LocationMap
-                location={contactMeta.location}
-                coordinates={contactMeta.coordinates}
-                latitude={contactMeta.latitude}
-                longitude={contactMeta.longitude}
-              />
+              <LocationMap />
             </div>
 
             <article className="rounded-2xl border border-sky-500/20 bg-[linear-gradient(145deg,#0f172a_0%,#111827_100%)] px-6 py-7 text-white shadow-[0_24px_50px_rgba(0,0,0,0.24)]">
@@ -128,8 +103,6 @@ type ContactIconName =
   | 'phone'
   | 'globe'
   | 'download'
-  | 'link'
-  | 'code'
   | 'dot'
   | 'arrow'
   | 'card'
@@ -183,25 +156,6 @@ function ContactIcon({
         <path d="M12 4.5v10" />
         <path d="m8.5 11 3.5 3.5 3.5-3.5" />
         <path d="M5 18.5h14" />
-      </svg>
-    )
-  }
-
-  if (icon === 'link') {
-    return (
-      <svg {...commonProps}>
-        <path d="M10 14 8.25 15.75a3 3 0 1 1-4.25-4.25L5.75 9.75A3 3 0 0 1 10 14Z" />
-        <path d="M14 10 15.75 8.25a3 3 0 1 1 4.25 4.25l-1.75 1.75A3 3 0 0 1 14 10Z" />
-        <path d="m9.5 14.5 5-5" />
-      </svg>
-    )
-  }
-
-  if (icon === 'code') {
-    return (
-      <svg {...commonProps}>
-        <path d="m9 8-4 4 4 4" />
-        <path d="m15 8 4 4-4 4" />
       </svg>
     )
   }

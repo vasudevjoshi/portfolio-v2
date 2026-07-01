@@ -119,10 +119,10 @@ export const contactLinks = [
 ] as const
 
 export const contactMeta = {
-  location: 'Mysuru, Karnataka, India',
-  coordinates: '12.2958° N, 76.6394° E',
-  longitude: 76.6394,
-  latitude: 12.2958,
+  location: 'Nagarbhavi, Mysuru, Karnataka, India',
+  coordinates: '12.966161, 77.519494',
+  longitude: 77.519494,
+  latitude: 12.966161,
   availabilityTitle: 'Available for Remote',
   availabilityText:
     'I thrive in asynchronous environments and distributed teams across any timezone.',
