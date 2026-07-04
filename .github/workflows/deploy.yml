@@ -56,7 +56,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Deploy to EC2 
+      - name: Deploy to Digital Ocean Droplet 
         uses: appleboy/ssh-action@v1.2.0 
         with: 
           host: ${{ secrets.EC2_HOST }}
