@@ -145,7 +145,7 @@ function ExperienceSection() {
                 A RAG based approach for recommending the chemicals and fact checking the chemicals indgredients for the concerned skin type
               </p>
               <a
-                href="https://doi.org/10.22214/ijraset.2026.79381"
+                href="https://ictactjournals.in/paper/IJDSML_Vol_7_Iss_3_Paper_7_1091_1096.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-200 underline-offset-4 transition hover:text-white hover:underline"

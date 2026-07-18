@@ -39,12 +39,12 @@ export const featuredProjects = [
   {
     title: 'Skincare Ingredient Analyzer',
     description:
-      'RAG-based system using OCR + Sentence-BERT to recommend safe cosmetic ingredients based on skin type. Published at IJRASET 2026 with a 4.8/5 rating.',
+      'RAG-based system using OCR + Sentence-BERT to recommend safe cosmetic ingredients based on skin type. Published at ICTACT JOURNAL in Data Science And Machine Learning 2026 with a 4.8/5 rating.',
     status: 'Published Research',
     statusTone: 'neutral',
     tags: ['Python', 'LangChain', 'Mongo Vector Store', 'OCR', 'Groq APIs'],
     primaryLabel: 'Read Paper',
-    primaryHref: 'https://doi.org/10.22214/ijraset.2026.79381',
+    primaryHref: 'https://ictactjournals.in/paper/IJDSML_Vol_7_Iss_3_Paper_7_1091_1096.pdf',
     secondaryLabel: 'View Code',
     secondaryHref: 'https://github.com/vasudevjoshi/fyp',
     icon: 'lab',
